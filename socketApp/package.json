@@ -1,0 +1,40 @@
+{
+    "name": "socket-app",
+    "version": "1.0.0",
+    "private": true,
+    "description": "静态网页 + 内置 WebSocket 服务的 AppImage",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build:linux": "electron-builder --linux --config build-web-only.yml",
+        "build:server": "cd server && npm ci --cache ./.npm-cache && ./node_modules/.bin/pkg index.js --targets node18-linux-x64 --output ../server-bin",
+        "build:linuxServer": "electron-builder --linux --config build-with-server.yml"
+    },
+    "devDependencies": {
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.1"
+    },
+    "dependencies": {
+        "ws": "^8.18.0"
+    },
+    "build": {
+        "appId": "com.hangzhou.socketapp",
+        "productName": "SocketApp",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "index.html",
+            "static/**",
+            "main.js",
+            "server/**"
+        ],
+        "asarUnpack": [],
+        "linux": {
+            "target": [
+                "AppImage"
+            ],
+            "category": "Utility"
+        }
+    }
+}

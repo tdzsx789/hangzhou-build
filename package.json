@@ -1,0 +1,38 @@
+{
+    "name": "hangzhou-build",
+    "version": "1.0.0",
+    "description": "杭州市民委员会 - 入口区落地55寸触摸屏",
+    "homepage": ".",
+    "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux",
+    "build:linux": "electron-builder --linux",
+    "build:linuxUDP": "cd udpApp && npm install --cache ./.npm-cache && npm run build:linuxUDP"
+  },
+    "keywords": [],
+    "author": "Developer <dev@example.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.1"
+    },
+    "build": {
+        "appId": "com.hangzhou.build",
+        "productName": "入口区落地55寸触摸屏",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "main.js",
+            "app/**/*"
+        ],
+        "linux": {
+            "target": [
+                "AppImage"
+            ],
+            "category": "Utility",
+            "maintainer": "dev@example.com"
+        }
+    }
+}

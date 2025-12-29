@@ -1,0 +1,16 @@
+{
+  "name": "a-election-game-ws-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WebSocket 服务：负责 Screen 与 Game 终端消息同步",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "build": "rm -rf dist && mkdir -p dist && cp index.js dist/index.js && cp package.json dist/package.json"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
+

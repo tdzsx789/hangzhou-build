@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+/udpApp/A馆第一居成立及价值
+/udpApp/D馆党建引领基层治理经验
+/udpApp/E馆展望未来
+/udpApp/static/media
+/udpApp/node_modules
+/socketApp/node_modules
+/socketApp/screen
+/socketApp/server/.npm-cache
+/socketApp/server/node_modules
+/socketApp/static/media

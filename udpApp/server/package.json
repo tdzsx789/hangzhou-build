@@ -1,0 +1,13 @@
+{
+  "name": "@hangzhou-civilian-committee/e-aihuman-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UDP+SSE服务",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
+

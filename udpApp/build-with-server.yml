@@ -1,0 +1,13 @@
+appId: com.hangzhou.udpapp
+productName: UDPApp
+directories:
+  output: dist
+files:
+  - index.html
+  - static/**
+  - main.js
+  - server/**
+linux:
+  target:
+    - AppImage
+  category: Utility

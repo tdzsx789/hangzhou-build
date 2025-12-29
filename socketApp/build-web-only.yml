@@ -1,0 +1,12 @@
+appId: com.hangzhou.socketapp
+productName: SocketApp
+directories:
+  output: dist
+files:
+  - index.html
+  - static/**
+  - main.js
+linux:
+  target:
+    - AppImage
+  category: Utility
